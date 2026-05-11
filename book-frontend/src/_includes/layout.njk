@@ -8,8 +8,12 @@
 
 <body>
 
-  {% include "nav.njk" %}
-
+  {% if page.url == "/" %}
+    {% include "nav.njk" %}
+  {% else %}
+    {% include "default-nav.njk" %}
+  {% endif %}
+  
   <main>
     {{ content | safe }}
   </main>

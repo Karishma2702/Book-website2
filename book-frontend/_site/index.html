@@ -8,44 +8,70 @@
 
 <body>
 
-  <nav>
-  <h2>📚 Book Website</h2>
+  
+    <nav>
+  <h2><a href="/index/">📚 Book Website</a></h2>
 
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/books/">Books</a></li>
-    <li><a href="/about/">About</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#fiction">Fiction</a></li>
+    <li><a href="#non_fiction">Non-Fiction</a></li>
+    <li><a href="#childrens_books">Children's Books</a></li>
+    <li><a href="#book_collection">Book Collection</a></li>
   </ul>
 </nav>
-
+  
+  
   <main>
     
+<section class="hero" id="about">
+  <h1>Welcome to BookVerse</h1>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Book App Login</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-
-<div class="auth-box">
-  <h2>Login</h2>
-
-  <input type="email" id="email" placeholder="Email">
-  <input type="password" id="password" placeholder="Password">
-
-  <button onclick="login()">Login</button>
-
-  <p style="margin-top:15px; text-align:center;">
-    Don't have an account?
-    <a href="/login/">Sign Up</a>
+  <p>
+    Discover books from different genres including fiction,
+    non-fiction, and children’s literature.
+    Explore stories, knowledge, and imagination all in one place.
   </p>
-</div>
+</section>
 
-<script src="/js/auth.js"></script>
-</body>
-</html>
+<section class="book-section bg-grey" id="fiction">
+  <h2>Fiction Books</h2>
+
+  <p>
+    Fiction books take readers into imaginative worlds filled with
+    memorable characters, adventures, emotions, and storytelling.
+    From fantasy to mystery, fiction inspires creativity
+    and entertainment.
+  </p>
+</section>
+
+<section id="non_fiction" class="book-section">
+  <h2>Non-Fiction Books</h2>
+
+  <p>
+    Non-fiction books provide real-world knowledge, facts, and insights.
+    These books cover topics like history, science, self-development,
+    biographies, and technology to help readers learn and grow.
+  </p>
+</section>
+
+<section id="childrens_books" class="book-section bg-grey">
+  <h2>Children’s Books</h2>
+
+  <p>
+    Children’s books are designed to educate and entertain young readers
+    through colorful storytelling, fun characters, and valuable life lessons.
+    They help develop imagination, language, and reading habits.
+  </p>
+</section>
+<section id="book_collection" class="book-section">
+  <h2>Book Collection</h2>
+
+  <p>
+    We are a greate collection of books which includes fiction, non-fiction and children's books. 
+  </p>
+  <a href="/books/">You can checkout the collection of books here</a>
+</section>
   </main>
 
   <footer>
