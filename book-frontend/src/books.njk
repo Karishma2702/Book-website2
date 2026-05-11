@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Books</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Book Library</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <div class="filter-box">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="Fiction">Fiction</option>
+      <option value="Non-Fiction">Non Fiction</option>
+      <option value="Children's Books">Children's Books</option>
+    </select>
+  </div>
+
+  <div class="books-grid" id="booksContainer"></div>
+</div>
+
+<div class="modal" id="bookModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h2 id="modalTitle"></h2>
+    <p id="modalAuthor"></p>
+    <br>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
+<script src="/js/books.js"></script>
+</body>
+</html>
