@@ -7,10 +7,12 @@ pagination:
 permalink: "/contributor/{{ contributor.id }}/"
 
 layout: layout.njk
+eleventyComputed:
+  title: "{{ contributor.name }}"
 ---
 
 <h1>{{ contributor.name }}</h1>
 
-<p>Email: {{ contributor.email }}</p>
+<p>Email: <a href="mailto:{{ contributor.email }}"> {{ contributor.email }}</a></p>
 
 <p>Phone: {{ contributor.phone }}</p>
