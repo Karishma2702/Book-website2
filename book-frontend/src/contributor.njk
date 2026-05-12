@@ -1,0 +1,16 @@
+---
+pagination:
+  data: contributors
+  size: 1
+  alias: contributor
+
+permalink: "/contributor/{{ contributor.id }}/"
+
+layout: layout.njk
+---
+
+<h1>{{ contributor.name }}</h1>
+
+<p>Email: {{ contributor.email }}</p>
+
+<p>Phone: {{ contributor.phone }}</p>

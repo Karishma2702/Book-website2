@@ -51,3 +51,15 @@ title: Home
   </p>
   <a href="/books/">You can checkout the collection of books here</a>
 </section>
+
+<section id="contributers" class="book-section bg-grey">
+  <h2>Contributers</h2>
+  <p>They are the contributors of collection of books</p>
+  <ul>
+    {% for contributor in contributors %}
+    <li>
+      <a href="/contributor/{{ contributor.id }}/"> {{ contributor.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
