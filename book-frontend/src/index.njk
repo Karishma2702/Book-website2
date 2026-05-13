@@ -46,6 +46,18 @@ title: Home
 <section id="book_collection" class="book-section">
   <h2>Book Collection</h2>
 
+  <h2>Books by Category</h2>
+
+{% for category, books in booksByCategory %}
+  <h3>{{ category }}</h3>
+
+  <ul>
+    {% for book in books %}
+      <li>{{ book.Title }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
   <p>
     We are a greate collection of books which includes fiction, non-fiction and children's books. 
   </p>
