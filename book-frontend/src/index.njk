@@ -50,10 +50,10 @@ title: Home
 
 {% for category, books in booksByCategory %}
   <h3>{{ category }}</h3>
-
+  <p> The {{ category }} has the {{ category | countItems }} books </p>
   <ul>
     {% for book in books %}
-      <li>{{ book.Title }}</li>
+      <li><a href="/book-page/{{ book.id }}/">{{ book.Title }}</a></li>
     {% endfor %}
   </ul>
 {% endfor %}
