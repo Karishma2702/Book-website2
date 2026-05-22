@@ -3,10 +3,12 @@ pagination:
   data: contributors
   size: 1
   alias: contributor
+  
 
 permalink: "/contributor/{{ contributor.id }}/"
 
 layout: layout.njk
+css: /css/style.css
 eleventyComputed:
   title: "{{ contributor.name }}"
 ---
