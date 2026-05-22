@@ -593,6 +593,44 @@ export interface ApiNavItemNavItem extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiNewsRoomNewsRoom extends Struct.SingleTypeSchema {
+  collectionName: 'news_rooms';
+  info: {
+    displayName: 'NewsRoom';
+    pluralName: 'news-rooms';
+    singularName: 'news-room';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::news-room.news-room'
+    > &
+      Schema.Attribute.Private;
+    PageContent: Schema.Attribute.DynamicZone<
+      [
+        'components.two-button-cta',
+        'components.title',
+        'components.info-card',
+        'components.header',
+        'components.first-button',
+        'components.article',
+        'components.article-list',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1109,6 +1147,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::contributer.contributer': ApiContributerContributer;
       'api::nav-item.nav-item': ApiNavItemNavItem;
+      'api::news-room.news-room': ApiNewsRoomNewsRoom;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

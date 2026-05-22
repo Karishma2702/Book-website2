@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_components_article_lists",
+  "info": {
+    "displayName": "ArticleList"
+  },
+  "options": {},
+  "attributes": {
+    "Article": {
+      "type": "component",
+      "component": "components.article",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
