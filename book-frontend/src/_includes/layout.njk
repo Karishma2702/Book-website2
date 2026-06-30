@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title or "Book Website" }}</title>
+  <link rel="stylesheet" href="{{ css }}">
+</head>
+
+<body>
+
+  {% if page.url == "/" %}
+    {% include "nav.njk" %}
+  {% else %}
+    {% include "default-nav.njk" %}
+  {% endif %}
+  
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+</body>
+</html>

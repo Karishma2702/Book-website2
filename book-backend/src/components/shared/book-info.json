@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_book_infos",
+  "info": {
+    "displayName": "book-info",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "pages": {
+      "type": "integer"
+    },
+    "language": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

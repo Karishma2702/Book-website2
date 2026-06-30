@@ -1,0 +1,17 @@
+---
+layout: layout.njk
+title: Strapi Newsroom
+css: /css/newsroom.css
+---
+
+<div class="page-wrapper">
+
+  {% for block in newsroom.PageContent %}
+
+    {% set componentName = block.__component | replace("components.", "") %}
+
+    {% include "components/" + componentName + ".njk" %}
+
+  {% endfor %}
+
+</div>

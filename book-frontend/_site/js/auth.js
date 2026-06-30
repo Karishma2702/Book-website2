@@ -16,15 +16,6 @@ async function login() {
       })
     });
 
-    const data = await response.json();
-
-    if (data.jwt) {
-      localStorage.setItem("token", data.jwt);
-      window.location.href = "/books/";
-    } else {
-      alert("Login failed");
-    }
-
   } catch (error) {
     console.error(error);
   }
@@ -49,13 +40,6 @@ async function signup() {
     });
 
     const data = await response.json();
-
-    if (data.jwt) {
-      localStorage.setItem("token", data.jwt);
-      window.location.href = "/books/";
-    } else {
-      alert("Signup failed");
-    }
 
   } catch (error) {
     console.error(error);

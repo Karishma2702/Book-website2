@@ -1,25 +1,78 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Book App Login</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+---
+layout: layout.njk
+title: Home
+css: /css/style.css
+---
 
-<div class="auth-box">
-  <h2>Login</h2>
+<section class="hero" id="about">
+  <h1>Welcome to BookVerse</h1>
 
-  <input type="email" id="email" placeholder="Email">
-  <input type="password" id="password" placeholder="Password">
-
-  <button onclick="login()">Login</button>
-
-  <p style="margin-top:15px; text-align:center;">
-    Don't have an account?
-    <a href="/login/">Sign Up</a>
+  <p>
+    Discover books from different genres including fiction,
+    non-fiction, and children’s literature.
+    Explore stories, knowledge, and imagination all in one place.
   </p>
-</div>
+</section>
 
-<script src="/js/auth.js"></script>
-</body>
-</html>
+<section class="book-section bg-grey" id="fiction">
+  <h2>Fiction Books</h2>
+
+  <p>
+    Fiction books take readers into imaginative worlds filled with
+    memorable characters, adventures, emotions, and storytelling.
+    From fantasy to mystery, fiction inspires creativity
+    and entertainment.
+  </p>
+</section>
+
+<section id="non_fiction" class="book-section">
+  <h2>Non-Fiction Books</h2>
+
+  <p>
+    Non-fiction books provide real-world knowledge, facts, and insights.
+    These books cover topics like history, science, self-development,
+    biographies, and technology to help readers learn and grow.
+  </p>
+</section>
+
+<section id="childrens_books" class="book-section bg-grey">
+  <h2>Children’s Books</h2>
+
+  <p>
+    Children’s books are designed to educate and entertain young readers
+    through colorful storytelling, fun characters, and valuable life lessons.
+    They help develop imagination, language, and reading habits.
+  </p>
+</section>
+<section id="book_collection" class="book-section">
+  <h2>Book Collection</h2>
+
+  <h2>Books by Category</h2>
+
+{% for category, books in booksByCategory %}
+  <h3>{{ category }}</h3>
+  <p> The {{ category }} has the {{ category | countItems }} books </p>
+  <ul>
+    {% for book in books %}
+      <li><a href="/book-page/{{ book.id }}/">{{ book.Title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+  <p>
+    We are a greate collection of books which includes fiction, non-fiction and children's books. 
+  </p>
+  <a href="/books/">You can checkout the collection of books here</a>
+</section>
+
+<section id="contributers" class="book-section bg-grey">
+  <h2>Contributers</h2>
+  <p>They are the contributors of collection of books</p>
+  <ul>
+    {% for contributor in contributors %}
+    <li>
+      <a href="/contributor/{{ contributor.id }}/"> {{ contributor.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

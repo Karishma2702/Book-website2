@@ -1,10 +1,5 @@
 const API_URL = "http://localhost:1337/api";
 
-const token = localStorage.getItem("token");
-
-if (!token) {
-  window.location.href = "/";
-}
 
 const booksContainer = document.getElementById("booksContainer");
 const filter = document.getElementById("categoryFilter");
@@ -17,11 +12,6 @@ async function fetchBooks() {
 
     const response = await fetch(
       `${API_URL}/books?populate=*`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      }
     );
 
     const data = await response.json();
@@ -117,12 +107,6 @@ function showDescription(title, author, description) {
 
 function closeModal() {
   document.getElementById("bookModal").style.display = "none";
-}
-
-// LOGOUT
-function logout() {
-  localStorage.removeItem("token");
-  window.location.href = "/";
 }
 
 fetchBooks();

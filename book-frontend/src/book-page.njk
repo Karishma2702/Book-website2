@@ -1,0 +1,21 @@
+---
+pagination:
+  data: books
+  size: 1
+  alias: book
+  css: /css/style.css
+
+permalink: "/book-page/{{ book.id }}/"
+
+layout: layout.njk
+eleventyComputed:
+  title: "{{ book.Title }}"
+---
+
+<h1>{{ book.Title | upperCase}}</h1>
+
+<h2>Book Info</h2>
+
+<p>No.of Pages: {{ book.info.pages }}</p>
+<p>language: {{ book.info.language }}</p>
+<p>Publisher: {{ book.info.publisher }}</p>

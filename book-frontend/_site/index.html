@@ -1,25 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Book App Login</title>
+  <meta charset="UTF-8">
+  <title>Home</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
 
-<div class="auth-box">
-  <h2>Login</h2>
+  
+    <nav>
+  <h2><a href="/index/">📚 Book Website</a></h2>
 
-  <input type="email" id="email" placeholder="Email">
-  <input type="password" id="password" placeholder="Password">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#fiction">Fiction</a></li>
+    <li><a href="#non_fiction">Non-Fiction</a></li>
+    <li><a href="#childrens_books">Children's Books</a></li>
+    <li><a href="#book_collection">Book Collection</a></li>
+    <li><a href="#contributers">Contributers</a></li>
+  </ul>
+</nav>
+  
+  
+  <main>
+    
+<section class="hero" id="about">
+  <h1>Welcome to BookVerse</h1>
 
-  <button onclick="login()">Login</button>
-
-  <p style="margin-top:15px; text-align:center;">
-    Don't have an account?
-    <a href="/login/">Sign Up</a>
+  <p>
+    Discover books from different genres including fiction,
+    non-fiction, and children’s literature.
+    Explore stories, knowledge, and imagination all in one place.
   </p>
-</div>
+</section>
 
-<script src="/js/auth.js"></script>
+<section class="book-section bg-grey" id="fiction">
+  <h2>Fiction Books</h2>
+
+  <p>
+    Fiction books take readers into imaginative worlds filled with
+    memorable characters, adventures, emotions, and storytelling.
+    From fantasy to mystery, fiction inspires creativity
+    and entertainment.
+  </p>
+</section>
+
+<section id="non_fiction" class="book-section">
+  <h2>Non-Fiction Books</h2>
+
+  <p>
+    Non-fiction books provide real-world knowledge, facts, and insights.
+    These books cover topics like history, science, self-development,
+    biographies, and technology to help readers learn and grow.
+  </p>
+</section>
+
+<section id="childrens_books" class="book-section bg-grey">
+  <h2>Children’s Books</h2>
+
+  <p>
+    Children’s books are designed to educate and entertain young readers
+    through colorful storytelling, fun characters, and valuable life lessons.
+    They help develop imagination, language, and reading habits.
+  </p>
+</section>
+<section id="book_collection" class="book-section">
+  <h2>Book Collection</h2>
+
+  <h2>Books by Category</h2>
+
+
+  <h3>Non-Fiction</h3>
+  <p> The Non-Fiction has the 11 books </p>
+  <ul>
+    
+      <li><a href="/book-page/11/">Educated</a></li>
+    
+      <li><a href="/book-page/24/">Sapiens: A Brief History of Humankind</a></li>
+    
+      <li><a href="/book-page/25/">The Immoral Life of Henrietta Lacks</a></li>
+    
+  </ul>
+
+  <h3>Children&#39;s Books</h3>
+  <p> The Children&#39;s Books has the 16 books </p>
+  <ul>
+    
+      <li><a href="/book-page/19/">The Very Hungry Caterpillar</a></li>
+    
+      <li><a href="/book-page/26/">Where the Wild Things Are</a></li>
+    
+      <li><a href="/book-page/28/">Charlotte&#39;s Web</a></li>
+    
+  </ul>
+
+  <h3>Fiction</h3>
+  <p> The Fiction has the 7 books </p>
+  <ul>
+    
+      <li><a href="/book-page/22/">Nineteen Eighty-Four</a></li>
+    
+      <li><a href="/book-page/29/">Lost Lambs</a></li>
+    
+      <li><a href="/book-page/30/">A Man Called Ove</a></li>
+    
+  </ul>
+
+
+  <p>
+    We are a greate collection of books which includes fiction, non-fiction and children's books. 
+  </p>
+  <a href="/books/">You can checkout the collection of books here</a>
+</section>
+
+<section id="contributers" class="book-section bg-grey">
+  <h2>Contributers</h2>
+  <p>They are the contributors of collection of books</p>
+  <ul>
+    
+    <li>
+      <a href="/contributor/5/"> Pranavi Contributer2</a>
+    </li>
+    
+    <li>
+      <a href="/contributor/7/"> Enno Contributer3</a>
+    </li>
+    
+    <li>
+      <a href="/contributor/9/"> Contributer4</a>
+    </li>
+    
+    <li>
+      <a href="/contributor/11/"> cfgds</a>
+    </li>
+    
+    <li>
+      <a href="/contributor/12/"> Karishma Contributer1</a>
+    </li>
+    
+  </ul>
+</section>
+  </main>
+
+  <footer>
+  <p>© 2026 Book Website. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
